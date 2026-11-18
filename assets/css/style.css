@@ -2,9 +2,23 @@ body {
   font-family: system-ui, sans-serif;
   margin: 0 auto;
   padding: 1rem;
-  max-width: 48rem;
+  max-width: 56rem;
   color: #111;
   background: #fff;
+}
+
+h1 {
+  margin-bottom: 0.25rem;
+}
+
+h2 {
+  margin-top: 1.5rem;
+  font-size: 1.15rem;
+}
+
+.lead {
+  color: #444;
+  margin-top: 0;
 }
 
 .fields {
@@ -17,17 +31,36 @@ body {
   min-width: 0;
 }
 
+.field.wide {
+  grid-column: 1 / -1;
+}
+
 label {
   display: block;
   margin-bottom: 0.25rem;
 }
 
-input,
-select {
+input {
   width: 100%;
   box-sizing: border-box;
   padding: 0.4rem;
   font: inherit;
+}
+
+input[type="range"] {
+  padding: 0;
+}
+
+.actions {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 0.75rem;
+}
+
+button {
+  padding: 0.4rem 1rem;
+  font: inherit;
+  cursor: pointer;
 }
 
 dl {
@@ -45,11 +78,15 @@ dd {
   margin: 0;
 }
 
+.table-wrap {
+  overflow-x: auto;
+  margin-top: 0.5rem;
+}
+
 table {
   width: 100%;
   border-collapse: collapse;
-  margin-top: 1rem;
-  font-size: 0.9rem;
+  font-size: 0.85rem;
 }
 
 th,
@@ -57,7 +94,7 @@ td {
   text-align: left;
   padding: 0.35rem 0.5rem;
   border-bottom: 1px solid #ccc;
-  overflow-wrap: anywhere;
+  white-space: nowrap;
 }
 
 thead th {
@@ -71,4 +108,12 @@ thead th {
 
 .error {
   color: #b00020;
+}
+
+.guide ol {
+  padding-left: 1.25rem;
+}
+
+code {
+  font-size: 0.95em;
 }

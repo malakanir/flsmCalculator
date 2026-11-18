@@ -3,16 +3,32 @@ export function getFormElements() {
     const form = document.getElementById("flsm-form");
     const addressInput = document.getElementById("flsm-address");
     const maskInput = document.getElementById("flsm-mask");
-    const modeSelect = document.getElementById("flsm-mode");
-    const valueInput = document.getElementById("flsm-value");
+    const cidrInput = document.getElementById("flsm-cidr");
+    const cidrValue = document.getElementById("flsm-cidr-value");
+    const subnetsInput = document.getElementById("flsm-subnets");
+    const hostsInput = document.getElementById("flsm-hosts");
+    const clearButton = document.getElementById("flsm-clear");
     const output = document.getElementById("flsm-output");
     if (!(form instanceof HTMLFormElement) ||
         !(addressInput instanceof HTMLInputElement) ||
         !(maskInput instanceof HTMLInputElement) ||
-        !(modeSelect instanceof HTMLSelectElement) ||
-        !(valueInput instanceof HTMLInputElement) ||
+        !(cidrInput instanceof HTMLInputElement) ||
+        !(cidrValue instanceof HTMLElement) ||
+        !(subnetsInput instanceof HTMLInputElement) ||
+        !(hostsInput instanceof HTMLInputElement) ||
+        !(clearButton instanceof HTMLButtonElement) ||
         !(output instanceof HTMLElement)) {
         throw new Error("FLSM form markup is missing one of the required element ids.");
     }
-    return { form, addressInput, maskInput, modeSelect, valueInput, output };
+    return {
+        form,
+        addressInput,
+        maskInput,
+        cidrInput,
+        cidrValue,
+        subnetsInput,
+        hostsInput,
+        clearButton,
+        output,
+    };
 }
